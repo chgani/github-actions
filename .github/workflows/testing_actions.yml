@@ -4,6 +4,7 @@ name: First Workflow
 
 # Controls when the workflow will run
 on:
+#if on is workflow_dispatch then it is manual workflow
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
