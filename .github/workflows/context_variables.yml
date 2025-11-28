@@ -1,0 +1,21 @@
+name: Testing Context Variables
+# context variables are from github metadata, we cannot define these variables at runtime
+# like getting username for workflow
+# metadata related to job/workflow/repository
+# these context variables are in-built
+# we can get the context variables from github actions document
+on:
+  workflow_dispatch
+
+env:
+  cloud: google-cloud
+
+jobs:
+  test_context_variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checking Context Variable"
+        run: |
+          echo "Repository Name : ${{ github.repository }}"
+          echo "Workflow Name : ${{ github.workflow }}"
+          echo "Triggered by : ${{ github.triggering_actor }}"
