@@ -1,0 +1,18 @@
+name: Testing configuration Variables
+
+on:
+  workflow_dispatch
+
+env:
+  cloud: google-cloud
+
+jobs:
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello to Ganesh."
+        run: echo "$Greeting $First_Name is using $cloud with project ${{ vars.PROJECT_ID }}!" # these variables are not defined in yml, these variables are set in repo settings/organization settings etc.,
+        env:
+          First_Name: Ganesh
