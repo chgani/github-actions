@@ -4,6 +4,7 @@ name: Testing Context Variables
 # metadata related to job/workflow/repository
 # these context variables are in-built
 # we can get the context variables from github actions document
+# https://docs.github.com/en/actions/reference/workflows-and-actions/contexts
 on:
   workflow_dispatch
 
